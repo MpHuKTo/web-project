@@ -1,0 +1,35 @@
+.MIbackground{
+    background-color: gainsboro;
+    width: 300px;
+    height: 400px;
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 25px;
+    display: inline-block;
+    
+}
+
+.img{
+    width: 280px;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.productName{
+    text-align: left;
+    margin-left: 15px;
+    font-size: 23px;
+}
+
+.productDescription{
+
+    text-align: left;
+    margin-left: 15px;
+}
+
+.priceandweight{
+
+    text-align: left;
+    margin-left: 40px;
+}
