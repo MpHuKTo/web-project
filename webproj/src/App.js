@@ -6,7 +6,7 @@ import Header from './components/Header';
 import { BrowserRouter,  Routes, Route, Link } from 'react-router-dom';
 
 const imagesMeat = [
-  "/Img/Meet/говяжьявырезка.jpg", "/Img/куриная грудка.jpg", "/Img/свиныерёбра.webp", "/Img/фарш говядина.jpg",
+  "/Img/Meat/говяжьявырезка.jpg", "/Img/куриная грудка.jpg", "/Img/свиныерёбра.webp", "/Img/фарш говядина.jpg",
   "/Img/meat5.png", "/Img/meat6.png", "/Img/meat7.png", "/Img/meat8.png",
   "/Img/meat9.png", "/Img/meat10.png", "/Img/meat11.png", "/Img/meat12.png",
   "/Img/meat13.png", "/Img/meat14.png", "/Img/meat15.png", "/Img/meat16.png",
@@ -293,26 +293,26 @@ const products = [
   {
     category: "meat",
     items: [
-        {name: "Говяжья вырезка", description: "Сочная и нежная говядина высшего качества для стейков или запекания.", price: 5400, weight: "1 кг", img: "/Img/Meet/говяжьявырезка.jpg"},
-        {name: "Куриные грудки", description: "Диетическое мясо с низким содержанием жира, идеально для фитнес-блюд.", price: 2300, weight: "1 кг", img: "/Img/Meet/куриная грудка.jpg"},
-        {name: "Свиные ребра", description: "Подойдут для запекания или приготовления барбекю.", price: 4800, weight: "1 кг", img: "/Img/Meet/свиныерёбра.webp"},
-        {name: "Фарш говяжий", description: "Подходит для котлет, пельменей или тефтелей.", price: 4100, weight: "1 кг", img: "/Img/Meet/фарш говядина.jpg"},
-        {name: "Баранина на кости", description: "Насыщенный вкус для приготовления бульонов и плова.", price: 6500, weight: "1 кг", img: "/Img/Meet/bee na kosti.jpg"},
-        {name: "Говяжий стейк Рибай", description: "Высококачественное мясо для гриля.", price: 8500, weight: "1 кг", img: "/Img/Meet/ribay gov.jpg"},
-        {name: "Куриные ножки", description: "Универсальный продукт для жарки, запекания или тушения.", price: 2100, weight: "1 кг", img: "/Img/Meet/chic leg.jpg"},
-        {name: "Свиное филе", description: "Нежное мясо для запекания и жарки.", price: 5200, weight: "1 кг", img: "/Img/Meet/pig fil.webp"},
-        {name: "Говяжий язык", description: "Подходит для варки и добавления в салаты.", price: 6000, weight: "1 кг", img: "/Img/Meet/gov iaz.jpg"},
-        {name: "Куриные крылья", description: "Идеально для маринада и гриля.", price: 1900, weight: "1 кг", img: "/Img/Meet/chic wing.webp"},
-        {name: "Утка", description: "Отличный выбор для праздничного стола.", price: 7900, weight: "1.5 кг", img: "/Img/Meet/gus.webp"},
-        {name: "Индюшиное филе", description: "Нежное мясо с низким содержанием жира.", price: 4500, weight: "1 кг", img: "/Img/Meet/induk fil.jpg"},
-        {name: "Куриный фарш", description: "Для котлет, запеканок и соусов.", price: 2200, weight: "1 кг", img: "/Img/Meet/chic far.webp"},
-        {name: "Свиные стейки", description: "Для жарки или запекания.", price: 5400, weight: "1 кг", img: "/Img/Meet/svin stek.png"},
-        {name: "Говяжий гуляш", description: "Уже порезанное мясо для тушения.", price: 4700, weight: "1 кг", img: "/Img/Meet/gov gul.jpg"},
-        {name: "Курица целая", description: "Универсальный продукт для запекания или бульона.", price: 4000, weight: "2 кг", img: "/Img/Meet/chic.jpg"},
-        {name: "Печень говяжья", description: "Богата витаминами, подходит для паштетов или жарки.", price: 2700, weight: "1 кг", img: "/Img/Meet/gov pec.jpg"},
-        {name: "Говяжий хвост", description: "Идеально для супов.", price: 3000, weight: "1 кг", img: "/Img/Meet/gov tal.webp"},
-        {name: "Свиные отбивные", description: "Для жарки или гриля.", price: 5100, weight: "1 кг", img: "/Img/Meet/svin bolno"},
-        {name: "Бекон нарезной", description: "Для завтраков или закусок.", price: 3000, weight: "500 г", img: "/Img/Meet/bek.jpg"}      
+        {name: "Говяжья вырезка", description: "Сочная и нежная говядина высшего качества для стейков или запекания.", price: 5400, weight: "1 кг", img: "/Img/Meat/говяжьявырезка.jpg"},
+        {name: "Куриные грудки", description: "Диетическое мясо с низким содержанием жира, идеально для фитнес-блюд.", price: 2300, weight: "1 кг", img: "/Img/Meat/куриная грудка.jpg"},
+        {name: "Свиные ребра", description: "Подойдут для запекания или приготовления барбекю.", price: 4800, weight: "1 кг", img: "/Img/Meat/свиныерёбра.webp"},
+        {name: "Фарш говяжий", description: "Подходит для котлет, пельменей или тефтелей.", price: 4100, weight: "1 кг", img: "/Img/Meat/фарш говядина.jpg"},
+        {name: "Баранина на кости", description: "Насыщенный вкус для приготовления бульонов и плова.", price: 6500, weight: "1 кг", img: "/Img/Meat/bee na kosti.jpg"},
+        {name: "Говяжий стейк Рибай", description: "Высококачественное мясо для гриля.", price: 8500, weight: "1 кг", img: "/Img/Meat/ribay gov.jpg"},
+        {name: "Куриные ножки", description: "Универсальный продукт для жарки, запекания или тушения.", price: 2100, weight: "1 кг", img: "/Img/Meat/chic leg.jpg"},
+        {name: "Свиное филе", description: "Нежное мясо для запекания и жарки.", price: 5200, weight: "1 кг", img: "/Img/Meat/pig fil.webp"},
+        {name: "Говяжий язык", description: "Подходит для варки и добавления в салаты.", price: 6000, weight: "1 кг", img: "/Img/Meat/gov iaz.jpg"},
+        {name: "Куриные крылья", description: "Идеально для маринада и гриля.", price: 1900, weight: "1 кг", img: "/Img/Meat/chic wing.webp"},
+        {name: "Утка", description: "Отличный выбор для праздничного стола.", price: 7900, weight: "1.5 кг", img: "/Img/Meat/gus.webp"},
+        {name: "Индюшиное филе", description: "Нежное мясо с низким содержанием жира.", price: 4500, weight: "1 кг", img: "/Img/Meat/induk fil.jpg"},
+        {name: "Куриный фарш", description: "Для котлет, запеканок и соусов.", price: 2200, weight: "1 кг", img: "/Img/Meat/chic far.webp"},
+        {name: "Свиные стейки", description: "Для жарки или запекания.", price: 5400, weight: "1 кг", img: "/Img/Meat/svin stek.png"},
+        {name: "Говяжий гуляш", description: "Уже порезанное мясо для тушения.", price: 4700, weight: "1 кг", img: "/Img/Meat/gov gul.jpg"},
+        {name: "Курица целая", description: "Универсальный продукт для запекания или бульона.", price: 4000, weight: "2 кг", img: "/Img/Meat/chic.jpg"},
+        {name: "Печень говяжья", description: "Богата витаминами, подходит для паштетов или жарки.", price: 2700, weight: "1 кг", img: "/Img/Meat/gov pec.jpg"},
+        {name: "Говяжий хвост", description: "Идеально для супов.", price: 3000, weight: "1 кг", img: "/Img/Meat/gov tal.webp"},
+        {name: "Свиные отбивные", description: "Для жарки или гриля.", price: 5100, weight: "1 кг", img: "/Img/Meat/svin bolno.webp"},
+        {name: "Бекон нарезной", description: "Для завтраков или закусок.", price: 3000, weight: "500 г", img: "/Img/Meat/bek.jpg"}      
     ]
   },
   {
@@ -328,7 +328,7 @@ const products = [
         {name: "Пицца", description: "С добавлением томатного соуса, шампиньонов,помидоров,сыра и украшено прекрасным базиликом.Mama mia!", price: 1800, weight: "400 г", img: "/Img/Bread/pizza.webp"},
         {name: "Круассаны с шоколадом", description: "С нежной начинкой внутри.", price: 600, weight: "3 шт", img: "/Img/Bread/crua choc.webp"},
         {name: "Печенье овсяное", description: "Легкий перекус к чаю.", price: 500, weight: "300 г", img: "/Img/Bread/ovs pec.webp"},
-        {name: "Маффины с черникой", description: "Нежные и сладкие.", price: 600, weight: "2 шт", img: "/Img/Bread/maf cher"}
+        {name: "Маффины с черникой", description: "Нежные и сладкие.", price: 600, weight: "2 шт", img: "/Img/Bread/maf cher.jpg"}
       ]      
     ]
   },
@@ -348,11 +348,11 @@ const products = [
         {name: "Энергетик “RedBull”", description: "Для активных и энергичных людей.", price: 700, weight: "250 мл", img: "/Img/Drinks/red muu.webp"},
         {name: "Вишневый сок", description: "Натуральный сок с ярким вкусом вишни.", price: 500, weight: "1 л", img: "/Img/Drinks/vishenka.jpeg"},
         {name: "Квас “Традиционный”", description: "Легкий и освежающий напиток с кислинкой.", price: 600, weight: "1.5 л", img: "/Img/Drinks/kvak.png"},
-        {name: "Томатный сок", description: "Полезный сок, богатый витаминами.", price: 450, weight: "1 л", img: "/Img/Drinks/tomatishe.jpeg"},
+        {name: "Томатный сок", description: "Полезный сок, богатый витаминами.", price: 450, weight: "1 л", img: "/Img/Drinks/tomatishe.jpg"},
         {name: "Мятный чай", description: "Успокаивающий и освежающий напиток.", price: 850, weight: "20 пакетиков", img: "/Img/Drinks/miatka.jpeg"},
-        {name: "Фруктовый чай “Ягоды”", description: "Сладкий и насыщенный аромат ягод.", price: 900, weight: "100 г", img: "/Img/Drinks/iagodka.jpeg"},
+        {name: "Фруктовый чай “Ягоды”", description: "Сладкий и насыщенный аромат ягод.", price: 900, weight: "100 г", img: "/Img/Drinks/iagodka.jpg"},
         {name: "Смузи “Манго и банан”", description: "Здоровый напиток для перекуса.", price: 650, weight: "300 мл", img: "/Img/Drinks/smuzamba.jpg"},
-        {name: "Холодный чай “Персик”", description: "Легкий освежающий напиток.", price: 450, weight: "1.5 л", img: "/Img/Drinks/fusestea.png"},
+        {name: "Холодный чай “Персик”", description: "Легкий освежающий напиток.", price: 450, weight: "1.5 л", img: "/Img/Drinks/fusetea.png"},
         {name: "Шоколадный молочный напиток", description: "Для сладкоежек.", price: 1000, weight: "200 мл", img: "/Img/Drinks/choco drinkus.jpg"},
         {name: "Кофе 3-в-1 “Капучино”", description: "Быстрое решение для любителей кофе.", price: 350, weight: "10 шт", img: "/Img/Drinks/kapuchinia.jpeg"},
         {name: "Фильтрованная вода", description: "Чистая и безопасная для питья вода.", price: 500, weight: "5 л", img: "/Img/Drinks/vodka.jpg"}
@@ -393,7 +393,7 @@ const products = [
         {name: "Сливочное масло", description: "Для выпечки и бутербродов.", price: 1200, weight: "200 г", img: "/Img/Dairy/Сливочное масло.jpg"},
         {name: "Сыр “Гауда”", description: "Полутвердый сыр с нежным вкусом.", price: 1500, weight: "250 г", img: "/Img/Dairy/Сыр “Гауда”.jpg"},
         {name: "Йогурт “Клубника”", description: "Нежный и сладкий.", price: 400, weight: "200 г", img: "/Img/Dairy/Йогурт “Клубника”.webp"},
-        {name: "Сметана", description: "Универсальный продукт для соусов и супов.", price: 350, weight: "200 г", img: "/Img/Dairy/Сметана.jpg"},
+        {name: "Сметана", description: "Универсальный продукт для соусов и супов.", price: 350, weight: "200 г", img: "/Img/Dairy/Сметана.jpeg"},
         {name: "Творог", description: "Богатый белком и кальцием.", price: 800, weight: "500 г", img: "/Img/Dairy/Творог.jpg"},
         {name: "Кефир", description: "Для здоровья и легкости.", price: 400, weight: "1 л", img: "/Img/Dairy/Кефир.jpg"},
         {name: "Сыр “Моцарелла”", description: "Идеален для пиццы и салатов.", price: 1700, weight: "250 г", img: "/Img/Dairy/Сыр “Моцарелла”.webp"},
@@ -439,102 +439,113 @@ function App() {
   let weight1 = '12g'
   let description1 = 'tasty'
 
-  const AssemblyMeat = () => (
-    
+  const AssemblyMeat = () => {
+    const meatItems = products.find((product) => product.category === "meat").items;
+    return (
+      <div>
+        {meatItems.map((item, index) => (
+          <MenuItem
+            img={item.img}
+            name={item.name}
+            description={item.description}
+            price={item.price}
+            weight={item.weight}
+          />
+        ))}
+      </div>
+    );
+  };
+  
+
+const AssemblyBread = () => {
+  const breadCategory = products.find((product) => product.category === "bread");
+  const breadItems = breadCategory.items.flat();
+  return (
     <div>
-      {namesMeat.map((name, index) => (
+      {breadItems.map((item, index) => (
         <MenuItem
-          
-          img={imagesMeat[index]}
-          name={name}
-          description={descriptionsMeat[index]}
-          price={pricesMeat[index]}
-          weight={weightsMeat[index]}
+          img={item.img}
+          name={item.name}
+          description={item.description}
+          price={item.price}
+          weight={item.weight}
         />
       ))}
     </div>
-
   );
+};
 
-const AssemblyBread = () => (
-  <div>
-    {nameBread.map((name, index) => (
-
-       <MenuItem
-       img={'/Img/image1.png'}
-       name={name}
-       description={descriptionsBread[index]}
-       price={pricesBread[index]}
-       weight={weightsBread[index]}
-     />
-
-    ))}
-  </div>
-  );
-
-  const AssemblyDrinks = () => (
-    <div>
-      {namesDrinks.map((name, index) => (
-  
-         <MenuItem
-         img={'/Img/image1.png'}
-         name={name}
-         description={descriptionsDrinks[index]}
-         price={pricesDrinks[index]}
-         weight={weightsDrinks[index]}
-       />
-  
-      ))}
-    </div>
-    );
-  
-    const AssemblyFruitsnvegies = () => (
+  const AssemblyDrinks = () => {
+    const drinksCategory = products.find((product) => product.category === "drinks");
+    const drinksItems = drinksCategory.items.flat();
+    return (
       <div>
-        {namesFruitsAndVeggies.map((name, index) => (
-    
-           <MenuItem
-           img={'/Img/image1.png'}
-           name={name}
-           description={descriptionsFruitsAndVeggies[index]}
-           price={pricesFruitsAndVeggies[index]}
-           weight={weightsFruitsAndVeggies[index]}
-         />
-    
+        {drinksItems.map((item, index) => (
+          <MenuItem
+            img={item.img}
+            name={item.name}
+            description={item.description}
+            price={item.price}
+            weight={item.weight}
+          />
         ))}
       </div>
-      );
-
-  const AssemblyMilk = () => (
-  <div>
-    {namesDairy.map((name, index) => (
-
-       <MenuItem
-       img={'/Img/image1.png'}
-       name={name}
-       description={descriptionsDairy[index]}
-       price={pricesDairy[index]}
-       weight={weightsDairy[index]}
-     />
-
-    ))}
-  </div>
-  );
-
-  const AssemblySnacks = () => (
+    );
+  };
+  
+    const AssemblyFruitsnvegies = () => {
+      const fruitsCategory = products.find((product) => product.category === "FruitsAndVeggies");
+      const fruitsItems = fruitsCategory.items.flat();
+  return (
     <div>
-      {namesSnacks.map((name, index) => (
-  
-         <MenuItem
-         img={'/Img/image1.png'}
-         name={name}
-         description={descriptionsSnacks[index]}
-         price={pricesSnacks[index]}
-         weight={weightsSnacks[index]}
-       />
-  
+      {fruitsItems.map((item, index) => (
+        <MenuItem
+          img={item.img}
+          name={item.name}
+          description={item.description}
+          price={item.price}
+          weight={item.weight}
+        />
       ))}
     </div>
-    );
+  );
+  };
+
+  const AssemblyMilk = () => {
+    const DairyCategory = products.find((product) => product.category === "Dairy");
+    const DairyItems = DairyCategory.items.flat();
+return (
+  <div>
+    {DairyItems.map((item, index) => (
+      <MenuItem
+        img={item.img}
+        name={item.name}
+        description={item.description}
+        price={item.price}
+        weight={item.weight}
+      />
+    ))}
+  </div>
+);
+};
+
+  const AssemblySnacks = () => {
+    const SnacksCategory = products.find((product) => product.category === "Snacks");
+    const SnacksItems = SnacksCategory.items.flat();
+return (
+  <div>
+    {SnacksItems.map((item, index) => (
+      <MenuItem
+        img={item.img}
+        name={item.name}
+        description={item.description}
+        price={item.price}
+        weight={item.weight}
+      />
+    ))}
+  </div>
+);
+};
 
 
 
@@ -556,7 +567,6 @@ const AssemblyBread = () => (
 
 
           </Routes>
-
 
         </BrowserRouter>
     </div>
