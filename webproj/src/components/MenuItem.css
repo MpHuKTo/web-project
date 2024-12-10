@@ -33,3 +33,28 @@
     text-align: left;
     margin-left: 40px;
 }
+
+
+
+.buttonsContainer {
+    display: flex;         
+    align-items: center;   
+    justify-content: center; 
+    margin-top: 15px;      
+  }
+  
+  .minusOne, .plusOne {
+    all: unset;
+    width: 35px;           
+    height: 35px;
+    margin: 0 35px;        
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .minplusImages {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
