@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import MenuItem from './components/MenuItem';
 import Header from './components/Header';
+import { DataProvider } from "./components/DataContext";
+import Cart from './components/Cart';
+
 
 import { BrowserRouter,  Routes, Route, Link } from 'react-router-dom';
 
@@ -147,6 +150,7 @@ function App() {
       <div>
         {products[0].meat.map((item, index) => (
           <MenuItem
+            key={index}
             img={item.img}
             name={item.name}
             description={item.description}
@@ -164,6 +168,7 @@ const AssemblyBread = () => {
     <div>
       {products[1].bread.map((item, index) => (
         <MenuItem
+          key={index}
           img={item.img}
           name={item.name}
           description={item.description}
@@ -181,6 +186,7 @@ const AssemblyBread = () => {
       <div>
         {products[2].drinks.map((item, index) => (
           <MenuItem
+           key={index}
             img={item.img}
             name={item.name}
             description={item.description}
@@ -197,6 +203,7 @@ const AssemblyBread = () => {
     <div>
       {products[3].FruitnVegies.map((item, index) => (
         <MenuItem
+          key={index}
           img={item.img}
           name={item.name}
           description={item.description}
@@ -213,6 +220,7 @@ return (
   <div>
     {products[4].Dairy.map((item, index) => (
       <MenuItem
+        key={index}
         img={item.img}
         name={item.name}
         description={item.description}
@@ -229,6 +237,7 @@ return (
   <div>
     {products[5].Snacks.map((item, index) => (
       <MenuItem
+        key={index}
         img={item.img}
         name={item.name}
         description={item.description}
@@ -245,7 +254,8 @@ return (
   return (
     <div className="App">
 
-      
+      <DataProvider>
+
       <BrowserRouter>
       <Header/>
          <Routes>
@@ -257,11 +267,13 @@ return (
           <Route path="/fruitsnvegies" element={<AssemblyFruitsnvegies/>}/>
           <Route path="/milk" element={<AssemblyMilk/>}/>
           <Route path="/snacks" element={<AssemblySnacks/>}/>
-
+          <Route path="/cart" element={<Cart/>}/>
 
           </Routes>
 
         </BrowserRouter>
+
+        </DataProvider>
     </div>
   );
 }

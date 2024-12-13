@@ -21,3 +21,12 @@
 
     text-align: left;
 }
+
+.cartImg{
+
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    
+
+}

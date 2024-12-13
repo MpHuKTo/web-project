@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
+import { useData } from './DataContext';
+import { useState } from 'react';
 
 const Header = () => {
+
+  
+
+  const { dataArray } = useData()
+
+  
+
   return (
     <div className="headerBackground">
       <header>
@@ -28,6 +37,9 @@ const Header = () => {
           <div className="category">Сладости и снеки</div>
         </Link>
 
+    <Link to="/cart">
+      <img src='/Img/Misc/cart.jpg' alt="" className='cartImg' />
+    </Link>
 
       </header>
     </div>

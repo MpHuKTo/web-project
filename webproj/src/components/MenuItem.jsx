@@ -1,15 +1,31 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './MenuItem.css'
+import { useData } from "./DataContext";
+
+
 
 
 
 const MenuItem = (props) => {
+
+
+  const { addData } = useData();
+
   const [productCount,SetPCount] = useState(0)
   
   const decreaseCount = () => {if(productCount > 0){SetPCount(productCount - 1)}};
   const increaseCount = () => SetPCount(productCount + 1);
 
+  useEffect(() => {
+    
+    let newData = {img: props.img, name:  props.name, description:  props.description, price:  props.price, weight:  props.weight, itemCount: productCount  };
+    addData(newData);
+
+},[productCount]);
+
+
   return (
+    
     <div className='MIbackground'>
       <img className='img' src={props.img}></img>
 
