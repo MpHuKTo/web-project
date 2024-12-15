@@ -1,0 +1,85 @@
+.healthy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .healthy-text {
+    flex: 1 1 40%;
+    margin: 20px;
+  }
+  
+  .healthy-text h1 {
+    font-size: 48px; 
+    color: #333;
+  }
+  
+  .healthy-text h2 {
+    font-size: 40px; 
+    color: #4caf50;
+  }
+  
+  .healthy-text p {
+    font-size: 24px; 
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .healthy-image {
+    flex: 1 1 50%;
+    text-align: center;
+  }
+  
+  .healthy-image img {
+    max-width: 70%;
+    height: auto;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .why-choose-us {
+    width: 100%;
+    margin-top: 80px;
+    padding-left: 20px;
+    padding-right: 5px;
+    padding-top: 20px; 
+    padding-bottom: 40px; 
+    background-color: #ffffff; 
+    border-radius: 10px;
+  }
+  
+  .why-choose-us h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .why-choose-us ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+  }
+  
+  .why-choose-us li {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .why-choose-us p {
+    font-size: 22px;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 20px;
+  }

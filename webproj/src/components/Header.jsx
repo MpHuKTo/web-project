@@ -15,8 +15,11 @@ const Header = () => {
   return (
     <div className="headerBackground">
       <header>
-        <div className="Logo">ТИПО ЛОГО</div>
-
+        <div className="logo">
+      <Link to="/">
+        <div className="category">FOODUPI</div>
+        </Link>
+        </div>
 
         <Link to="/meat">
           <div className="category">Мясо</div>

@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Mainpage from './components/Mainpage';
 import MenuItem from './components/MenuItem';
 import Header from './components/Header';
 import { DataProvider } from "./components/DataContext";
@@ -134,10 +135,16 @@ const products = [
       {name: "Кекс “Мраморный”", description: "Домашний десерт с шоколадным рисунком.", price: 1200, weight: "300 г", img: "/Img/Snacks/Кекс “Мраморный”.webp"},
       {name: "Чипсы овощные “BeHealthy”", description: "Здоровая альтернатива обычным чипсам.", price: 600, weight: "100 г", img: "/Img/Snacks/Чипсы овощные “BeHealthy”.webp"}
     ]    
-}
-
+ }
 ];
 
+const Mainpagik = () => {
+  return (
+    <>
+    <Mainpage/>
+    </>
+  )
+ }
 
 function App() {
   let test1 = 'mogus'
@@ -260,7 +267,7 @@ return (
       <Header/>
          <Routes>
 
-
+          <Route path="/" element={<Mainpagik/>}/>
           <Route path="/meat" element={<AssemblyMeat/>}/>
           <Route path="/bread" element={<AssemblyBread/>}/>
           <Route path="/drinks" element={<AssemblyDrinks/>}/>
