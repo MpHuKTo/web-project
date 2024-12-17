@@ -10,13 +10,12 @@ const MenuItem = (props) => {
 
 
   const { addData } = useData();
-
-  const [productCount,SetPCount] = useState(0)
+  const [productCount, SetPCount] = useState(props.productCount || 0);
   
   const decreaseCount = () => {if(productCount > 0){SetPCount(productCount - 1)}};
   const increaseCount = () => SetPCount(productCount + 1);
 
-  useEffect(() => {
+  useEffect(() => { 
     
     let newData = {img: props.img, name:  props.name, description:  props.description, price:  props.price, weight:  props.weight, itemCount: productCount  };
     addData(newData);

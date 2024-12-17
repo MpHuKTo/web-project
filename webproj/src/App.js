@@ -5,6 +5,7 @@ import MenuItem from './components/MenuItem';
 import Header from './components/Header';
 import { DataProvider } from "./components/DataContext";
 import Cart from './components/Cart';
+import { useData } from './components/DataContext';
 
 
 import { BrowserRouter,  Routes, Route, Link } from 'react-router-dom';
@@ -147,15 +148,40 @@ const Mainpagik = () => {
  }
 
 function App() {
+  
   let test1 = 'mogus'
   let price1 = 6400
   let weight1 = '12g'
   let description1 = 'tasty'
 
   const AssemblyMeat = () => {
-    return (
+    const { dataArray } = useData()
+    return ( 
       <div>
-        {products[0].meat.map((item, index) => (
+        {
+        
+        products[0].meat.map((item, index) => {
+
+          const matchingItems = dataArray.filter(itemDA => itemDA.name === item.name);
+
+          const lastMatchingItem = matchingItems.length > 0 
+          ? matchingItems[matchingItems.length - 1] 
+          : null;
+          if(lastMatchingItem != null){
+            return ( 
+          <MenuItem
+            key={index}
+            img={lastMatchingItem.img}
+            name={lastMatchingItem.name}
+            description={lastMatchingItem.description}
+            price={lastMatchingItem.price}
+            weight={lastMatchingItem.weight}
+            productCount = {lastMatchingItem.itemCount}
+          />
+            )
+          }
+          else{
+            return ( 
           <MenuItem
             key={index}
             img={item.img}
@@ -164,16 +190,39 @@ function App() {
             price={item.price}
             weight={item.weight}
           />
-        ))}
+            )
+          }
+  })}
       </div>
     );
   };
   
 
 const AssemblyBread = () => {
+  const { dataArray } = useData()
   return (
     <div>
-      {products[1].bread.map((item, index) => (
+      {products[1].bread.map((item, index) => {
+        const matchingItems = dataArray.filter(itemDA => itemDA.name === item.name);
+
+        const lastMatchingItem = matchingItems.length > 0 
+        ? matchingItems[matchingItems.length - 1] 
+        : null;
+        if(lastMatchingItem != null){
+          return ( 
+        <MenuItem
+          key={index}
+          img={lastMatchingItem.img}
+          name={lastMatchingItem.name}
+          description={lastMatchingItem.description}
+          price={lastMatchingItem.price}
+          weight={lastMatchingItem.weight}
+          productCount = {lastMatchingItem.itemCount}
+        />
+          )
+        }
+        else{
+          return ( 
         <MenuItem
           key={index}
           img={item.img}
@@ -182,33 +231,38 @@ const AssemblyBread = () => {
           price={item.price}
           weight={item.weight}
         />
-      ))}
+          )
+        }
+})}
     </div>
   );
 };
 
   const AssemblyDrinks = () => {
-
+    const { dataArray } = useData()
     return (
       <div>
-        {products[2].drinks.map((item, index) => (
-          <MenuItem
-           key={index}
-            img={item.img}
-            name={item.name}
-            description={item.description}
-            price={item.price}
-            weight={item.weight}
-          />
-        ))}
-      </div>
-    );
-  };
-  
-    const AssemblyFruitsnvegies = () => {
-  return (
-    <div>
-      {products[3].FruitnVegies.map((item, index) => (
+        {products[2].drinks.map((item, index) => {
+        const matchingItems = dataArray.filter(itemDA => itemDA.name === item.name);
+
+        const lastMatchingItem = matchingItems.length > 0 
+        ? matchingItems[matchingItems.length - 1] 
+        : null;
+        if(lastMatchingItem != null){
+          return ( 
+        <MenuItem
+          key={index}
+          img={lastMatchingItem.img}
+          name={lastMatchingItem.name}
+          description={lastMatchingItem.description}
+          price={lastMatchingItem.price}
+          weight={lastMatchingItem.weight}
+          productCount = {lastMatchingItem.itemCount}
+        />
+          )
+        }
+        else{
+          return ( 
         <MenuItem
           key={index}
           img={item.img}
@@ -217,15 +271,78 @@ const AssemblyBread = () => {
           price={item.price}
           weight={item.weight}
         />
-      ))}
+          )
+        }
+  })}
+      </div>
+    );
+  };
+  
+    const AssemblyFruitsnvegies = () => {
+      const { dataArray } = useData()
+  return (
+    <div>
+      {products[3].FruitnVegies.map((item, index) => {
+        const matchingItems = dataArray.filter(itemDA => itemDA.name === item.name);
+
+        const lastMatchingItem = matchingItems.length > 0 
+        ? matchingItems[matchingItems.length - 1] 
+        : null;
+        if(lastMatchingItem != null){
+          return ( 
+        <MenuItem
+          key={index}
+          img={lastMatchingItem.img}
+          name={lastMatchingItem.name}
+          description={lastMatchingItem.description}
+          price={lastMatchingItem.price}
+          weight={lastMatchingItem.weight}
+          productCount = {lastMatchingItem.itemCount}
+        />
+          )
+        }
+        else{
+          return ( 
+        <MenuItem
+          key={index}
+          img={item.img}
+          name={item.name}
+          description={item.description}
+          price={item.price}
+          weight={item.weight}
+        />
+          )
+        }
+    })}
     </div>
   );
   };
 
   const AssemblyMilk = () => {
+    const { dataArray } = useData()
 return (
   <div>
-    {products[4].Dairy.map((item, index) => (
+    {products[4].Dairy.map((item, index) => {
+      const matchingItems = dataArray.filter(itemDA => itemDA.name === item.name);
+
+      const lastMatchingItem = matchingItems.length > 0 
+      ? matchingItems[matchingItems.length - 1] 
+      : null;
+      if(lastMatchingItem != null){
+        return ( 
+      <MenuItem
+        key={index}
+        img={lastMatchingItem.img}
+        name={lastMatchingItem.name}
+        description={lastMatchingItem.description}
+        price={lastMatchingItem.price}
+        weight={lastMatchingItem.weight}
+        productCount = {lastMatchingItem.itemCount}
+      />
+        )
+      }
+      else{
+        return ( 
       <MenuItem
         key={index}
         img={item.img}
@@ -234,15 +351,38 @@ return (
         price={item.price}
         weight={item.weight}
       />
-    ))}
+        )
+      }
+  })}
   </div>
 );
 };
 
   const AssemblySnacks = () => {
+    const { dataArray } = useData()
 return (
   <div>
-    {products[5].Snacks.map((item, index) => (
+    {products[5].Snacks.map((item, index) => {
+      const matchingItems = dataArray.filter(itemDA => itemDA.name === item.name);
+
+      const lastMatchingItem = matchingItems.length > 0 
+      ? matchingItems[matchingItems.length - 1] 
+      : null;
+      if(lastMatchingItem != null){
+        return ( 
+      <MenuItem
+        key={index}
+        img={lastMatchingItem.img}
+        name={lastMatchingItem.name}
+        description={lastMatchingItem.description}
+        price={lastMatchingItem.price}
+        weight={lastMatchingItem.weight}
+        productCount = {lastMatchingItem.itemCount}
+      />
+        )
+      }
+      else{
+        return ( 
       <MenuItem
         key={index}
         img={item.img}
@@ -251,7 +391,9 @@ return (
         price={item.price}
         weight={item.weight}
       />
-    ))}
+        )
+      } 
+  })}
   </div>
 );
 };

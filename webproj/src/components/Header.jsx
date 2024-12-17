@@ -8,7 +8,7 @@ const Header = () => {
 
   
 
-  const { dataArray } = useData()
+ 
 
   
 
