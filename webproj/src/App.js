@@ -3,6 +3,8 @@ import './App.css';
 import Mainpage from './components/Mainpage';
 import MenuItem from './components/MenuItem';
 import Header from './components/Header';
+import Checkout from './components/Checkout';
+import Weather from './components/Weather';
 import { DataProvider } from "./components/DataContext";
 import Cart from './components/Cart';
 import { useData } from './components/DataContext';
@@ -143,6 +145,15 @@ const Mainpagik = () => {
   return (
     <>
     <Mainpage/>
+    <Weather/>
+    </>
+  )
+ }
+
+ const Checkouto = () => {
+  return (
+    <>
+    <Checkout/>
     </>
   )
  }
@@ -417,6 +428,7 @@ return (
           <Route path="/milk" element={<AssemblyMilk/>}/>
           <Route path="/snacks" element={<AssemblySnacks/>}/>
           <Route path="/cart" element={<Cart/>}/>
+          <Route path="/checkout" element={<Checkouto/>}/>
 
           </Routes>
 

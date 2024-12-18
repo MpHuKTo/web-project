@@ -1,67 +1,71 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { useData } from './DataContext';
-
+import { useNavigate } from 'react-router-dom';
+import './Cart.css'; 
 
 const Cart = () => {
-
     const { dataArray } = useData();
+    const navigate = useNavigate();
 
-const CartItem = (props) =>{
-    return(
-    <div className='MIbackground'>
-      <img className='img' src={props.img}></img>
+    const [city, setCity] = useState('');
 
-        <div className='productName'>{props.name}</div>
+    const CartItem = (props) => {
+        return (
+            <div className='cart-item'>
+                <img className='img' src={props.img} alt={props.name}></img>
+                <div className='product-name'>{props.name}</div>
+                <div className='product-description'>{props.description}</div>
+                <div className='price-and-weight'>
+                    {props.price} Тг. за {props.weight}
+                </div>
+                <div className='count'>Количество: {props.itemCount}</div>
+            </div>
+        );
+    };
 
-        <div className='productDescription'>{props.description}</div>
+    const CartAssembly = () => {
+        const filteredItems = dataArray.filter(item => item.itemCount !== 0);
 
-        <div className='priceandweight'>{props.price} Тг.   за   {props.weight}</div>
+        const uniqueItems = Array.from(
+            new Map(filteredItems.map(item => [item.name, item])).values()
+        );
 
-        <div className='count'>{props.itemCount}</div>
+        return uniqueItems.map((item, index) => (
+            <CartItem
+                key={index}
+                img={item.img}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                weight={item.weight}
+                itemCount={item.itemCount}
+            />
+        ));
+    };
 
-    </div>
-    )
-}
+    const handleCheckout = () => {
+        const total = dataArray
+            .filter(item => item.itemCount !== 0)
+            .reduce((sum, item) => sum + item.price * item.itemCount, 0);
 
+        const userCity = prompt('Введите ваш город:');
+        if (userCity) {
+            setCity(userCity);
+            alert(`Город: ${userCity}\nИтоговая сумма: ${total.toLocaleString()} Тг.`);
+            navigate('/checkout'); 
+        }
+    };
 
-const CartAssembly = () =>{
-    
-    const filteredItems = dataArray.filter(item => item.itemCount !== 0);
+    return (
+        <div className='cart-container'>
+            <div className='cart-items'>
+                <CartAssembly />
+            </div>
+            <button className='checkout-button' onClick={handleCheckout}>
+                Оформить заказ
+            </button>
+        </div>
+    );
+};
 
-    const lastItemIndex = {};
-
-    filteredItems.forEach((item, index) => {
-        lastItemIndex[item.name] = index;
-    });
-
-
-    const uniqueItems = Object.keys(lastItemIndex).map(name => {
-        return filteredItems[lastItemIndex[name]];
-    });
-
-    return uniqueItems.map((item, index) => (
-        <CartItem
-            key={index}  
-            img={item.img}
-            name={item.name}
-            description={item.description}
-            price={item.price}
-            weight={item.weight}
-            itemCount={item.itemCount}
-        />
-    ))
-}
-
-
-  return (
-    <div>
-      
-        <CartAssembly></CartAssembly>
-
-    </div>
-  )
-
-
-}
-
-export default Cart
+export default Cart;
