@@ -44,7 +44,13 @@ const Cart = () => {
     };
 
     const handleCheckout = () => {
-        const total = dataArray
+
+        const filteredItems = dataArray.filter(item => item.itemCount !== 0);
+
+        const uniqueItems = Array.from(
+            new Map(filteredItems.map(item => [item.name, item])).values()
+        );
+        const total = uniqueItems
             .filter(item => item.itemCount !== 0)
             .reduce((sum, item) => sum + item.price * item.itemCount, 0);
 
@@ -54,6 +60,7 @@ const Cart = () => {
             alert(`Город: ${userCity}\nИтоговая сумма: ${total.toLocaleString()} Тг.`);
             navigate('/checkout'); 
         }
+        
     };
 
     return (

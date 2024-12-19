@@ -160,10 +160,7 @@ const Mainpagik = () => {
 
 function App() {
   
-  let test1 = 'mogus'
-  let price1 = 6400
-  let weight1 = '12g'
-  let description1 = 'tasty'
+ 
 
   const AssemblyMeat = () => {
     const { dataArray } = useData()

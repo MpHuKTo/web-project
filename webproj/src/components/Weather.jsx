@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Wearher.css';
 
 function Weather() {
+  
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
